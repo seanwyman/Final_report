@@ -17,8 +17,10 @@ First we start off by running an nmap scan `nmap -sS -sC -sV -Pn 192.168.1.0/24/
 
 
 Now that we've identified the target machine `192.168.1.110` as the target WordPress server, and we can start enumerating  with a common wordlist provided by the Wordpress scan `WPSCAN`, using `wpscan --url http://192.168.1.110/wordpress/ `,
+![image](https://user-images.githubusercontent.com/86163817/131775063-0ee3e241-73bf-460c-8dc0-f05a7fc8a0fc.png)
 
-[wordpress_results.png]
+![image](https://user-images.githubusercontent.com/86163817/131775078-3095908b-888c-4baa-98c7-060caa9aac61.png)
+
 
 The results of the scan indicate that the are 3 different wordpress directories and 2 different users found on the system, `steven` and `michael`, Since port 22 is open we can try sshing into the target machine using the following 
 command `ssh michael@192.168.1.115` and trying to guess his password to gain access
